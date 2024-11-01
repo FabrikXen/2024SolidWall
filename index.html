@@ -51,12 +51,16 @@
         // Get the <ul> element to append the links
         const sketchList = document.getElementById("sketchList");
 
+        // Define your GitHub username and repository name
+        const githubUsername = "fabrikxen"; // Add your GitHub username
+        const repoName = "2024SolidWall";    // Add your GitHub repo name
+
         // Generate list items with links for each sketch
         sketches.forEach(sketch => {
             const listItem = document.createElement("li");
             const link = document.createElement("a");
             // Update the href to point to the correct GitHub Pages URL
-            link.href = `/fabrikxen/2024SolidWall/${sketch}/index.html`;
+            link.href = `/${githubUsername}/${repoName}/${sketch}/index.html`;
             link.textContent = sketch;
             listItem.appendChild(link);
             sketchList.appendChild(listItem);
