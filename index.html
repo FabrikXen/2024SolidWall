@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Sketches </title>
+    <title>Sketches</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,35 +36,35 @@
     </style>
 </head>
 <body>
-    <h1> Sketches </h1>
+    <h1>Sketches</h1>
     <ul id="sketchList"></ul>
 
     <script>
-        // Update this array with your sketch folder names
+        // Define your GitHub username and repository name as strings
+        const githubUsername = "fabrikxen"; // Your GitHub username
+        const repoName = "2024SolidWall";    // Your GitHub repo name
+
+        // Array of your sketch folder names
         const sketches = [
             "2024-10-09_face_mesh",
             "2024-10-30_flower_eyes",
-            "2024-10-30_mouth_mask",
-            "2024-11-01_just_mouth" // Add more sketch folder names here as needed
+            "2024-11-01_just_mouth" // Add more sketch folder names here if needed
         ];
 
         // Get the <ul> element to append the links
         const sketchList = document.getElementById("sketchList");
 
-        // Define your GitHub username and repository name
-        const githubUsername = "fabrikxen"; // Add your GitHub username
-        const repoName = "2024SolidWall";    // Add your GitHub repo name
-
-        // Generate list items with links for each sketch
+        // Construct the links for each sketch
         sketches.forEach(sketch => {
             const listItem = document.createElement("li");
             const link = document.createElement("a");
-            // Update the href to point to the correct GitHub Pages URL
-            link.href = `/${githubUsername}/${repoName}/${sketch}/index.html`;
-            link.textContent = sketch;
+            // Construct the href to point to the GitHub Pages URL
+            link.href = `https://fabrikxen.github.io/fabrikxen/${repoName}/${sketch}/index.html`;
+            link.textContent = sketch; // The link text is the folder name
             listItem.appendChild(link);
             sketchList.appendChild(listItem);
         });
     </script>
 </body>
 </html>
+
