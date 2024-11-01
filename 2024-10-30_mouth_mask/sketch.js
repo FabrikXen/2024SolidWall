@@ -2,7 +2,6 @@ let faceMesh;
 let video;
 let faces = [];
 let options = { maxFaces: 2, refineLandmarks: false, flipHorizontal: false };
-let mask;
 
 function preload() {
     // Load the faceMesh model
@@ -20,10 +19,12 @@ function setup() {
   faceMesh.detectStart(video, gotFaces);
 }
 
-  function draw() {
-    // background(0); // uncomment to get trailing dots
+function draw() 
+{
+  background(0); // comment out to get trailing dots
 
-    for (let i = 0; i < faces.length; i++) {
+  for (let i = 0; i < faces.length; i++) 
+  {
         let face = faces[i];
 
         // dots on face
@@ -51,8 +52,8 @@ function setup() {
             fill(255,255,255);
             circle(eyes.x, eyes.y, 4);
         }
-      }
-  }
+    }
+}
 
 // Callback function for when faceMesh outputs data
 function gotFaces(results) {
