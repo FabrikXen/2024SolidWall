@@ -3,26 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My p5.js Sketches</title>
+    <title> Sketches</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; }
-        a { text-decoration: none; color: #007acc; }
-        a:hover { text-decoration: underline; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007acc;
+            padding: 8px 12px;
+            border: 1px solid #007acc;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a:hover {
+            background-color: #007acc;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <h1>My p5.js Sketches</h1>
+    <h1> Sketches</h1>
     <ul id="sketchList"></ul>
 
     <script>
-        // List of sketch directories - add more as you create new sketches
+        // Update this array with your sketch folder names
         const sketches = [
             "2024-10-09_face_mesh",
             "2024-10-30_flower_eyes",
-            "2024-10-30_mouth_mask"
-            // Add more sketch folder names here
+            "2024-10-30_mouth_mask" // Add more sketch folder names here as needed
         ];
 
         // Get the <ul> element to append the links
@@ -32,7 +54,8 @@
         sketches.forEach(sketch => {
             const listItem = document.createElement("li");
             const link = document.createElement("a");
-            link.href = `./${sketch}/index.html`;
+            // Update the href to point to the correct GitHub Pages URL
+            link.href = `/${fabrikxen}/2024SolidWall/${sketch}/index.html`;
             link.textContent = sketch;
             listItem.appendChild(link);
             sketchList.appendChild(listItem);
